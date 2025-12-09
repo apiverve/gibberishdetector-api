@@ -1,0 +1,35 @@
+{
+  "name": "@apiverve/gibberishdetector",
+  "version": "1.1.12",
+  "description": "Gibberish Detector analyzes text using bigram frequency and vowel ratios to identify nonsensical or randomly generated content.",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "test": "mocha",
+    "example": "node examples/basic.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apiverve/gibberishdetector-api.git",
+    "directory": "npm"
+  },
+  "keywords": [
+    "gibberish detector", "text validation", "spam detection", "nonsense detector", "text quality"
+  ],
+  "author": "APIVerve <hello@apiverve.com> (http://apiverve.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/apiverve/gibberishdetector-api/issues"
+  },
+  "homepage": "https://apiverve.com/marketplace/gibberishdetector?utm_source=npm",
+  "devDependencies": {
+    "mocha": "^11.0.1",
+    "chai": "^5.1.2",
+    "dotenv": "^16.4.7"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2",
+    "promise": "^8.3.0",
+    "axios": "1.13.2"
+  }
+}
