@@ -1,0 +1,77 @@
+openapi: 3.0.4
+info:
+  title: Gibberish Detector
+  description: Gibberish Detector analyzes text using bigram frequency and vowel ratios to identify nonsensical or randomly generated content.
+  termsOfService: https://apiverve.com/terms/
+  contact:
+    name: APIVerve Support
+    email: hello@apiverve.com
+    url: https://apiverve.com/contact
+  version: 1.0.9
+externalDocs:
+  description: Learn more about APIVerve
+  url: https://docs.apiverve.com?utm_source=openapi
+servers:
+- url: https://api.apiverve.com/
+paths:
+  /v1/gibberishdetector:
+    post:
+      summary: Detect Gibberish Text
+      description: Gibberish Detector analyzes text using bigram frequency and vowel ratios to identify nonsensical or randomly generated content.
+      operationId: gibberishdetector
+      parameters: []
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: status
+                  error:
+                    type: string
+                    description: error
+                  data:
+                    type: string
+                    description: data
+              example:
+                status: ok
+                error: 
+                data:
+                  isGibberish: false
+                  score: 0.469
+                  confidence: 46.93
+                  text: The quick brown fox jumps over the lazy dog
+                  textLength: 43
+        '401':
+          description: Your request was not authorized, or your API Key was invalid
+        '404':
+          description: Requested resource was not found
+        '500':
+          description: A server error has occured, try again later
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                text:
+                  type: string
+                  description: Text to analyze (max 10,000 characters)
+                  example: The quick brown fox jumps over the lazy dog
+              required:
+              - text
+              example:
+                text: The quick brown fox jumps over the lazy dog
+components:
+  securitySchemes:
+    api_key:
+      type: apiKey
+      name: x-api-key
+      in: header
+security:
+- api_key: []
