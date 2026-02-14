@@ -1,23 +1,25 @@
 openapi: 3.0.4
 info:
   title: Gibberish Detector
-  description: Gibberish Detector analyzes text using bigram frequency and vowel ratios to identify nonsensical or randomly generated content.
+  description: >-
+    Gibberish Detector analyzes text using bigram frequency and vowel ratios to
+    identify nonsensical or randomly generated content.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
     email: hello@apiverve.com
     url: https://apiverve.com/contact
-  version: 1.0.9
+  version: 1.0.0
 externalDocs:
   description: Learn more about APIVerve
   url: https://docs.apiverve.com?utm_source=openapi
 servers:
-- url: https://api.apiverve.com/
+  - url: https://api.apiverve.com/
 paths:
   /v1/gibberishdetector:
     post:
       summary: Detect Gibberish Text
-      description: Gibberish Detector analyzes text using bigram frequency and vowel ratios to identify nonsensical or randomly generated content.
+      description: Analyze text to detect gibberish content
       operationId: gibberishdetector
       parameters: []
       responses:
@@ -35,11 +37,11 @@ paths:
                     type: string
                     description: error
                   data:
-                    type: string
+                    type: object
                     description: data
               example:
                 status: ok
-                error: 
+                error: null
                 data:
                   isGibberish: false
                   score: 0.469
@@ -51,7 +53,7 @@ paths:
         '404':
           description: Requested resource was not found
         '500':
-          description: A server error has occured, try again later
+          description: A server error has occurred, try again later
       requestBody:
         required: true
         content:
@@ -62,11 +64,8 @@ paths:
                 text:
                   type: string
                   description: Text to analyze (max 10,000 characters)
-                  example: The quick brown fox jumps over the lazy dog
               required:
-              - text
-              example:
-                text: The quick brown fox jumps over the lazy dog
+                - text
 components:
   securitySchemes:
     api_key:
@@ -74,4 +73,6 @@ components:
       name: x-api-key
       in: header
 security:
-- api_key: []
+  - api_key: []
+sampleRequest:
+  text: The quick brown fox jumps over the lazy dog
