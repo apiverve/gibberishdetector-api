@@ -220,8 +220,9 @@ from apiverve_gibberishdetector.apiClient import GibberishdetectorAPIClient
 
 api = GibberishdetectorAPIClient("[YOUR_API_KEY]")
 
+query = { "text": "The quick brown fox jumps over the lazy dog" }
+
 try:
-    query = { "text": "The quick brown fox jumps over the lazy dog" }
     result = api.execute(query)
     print(result)
 finally:
