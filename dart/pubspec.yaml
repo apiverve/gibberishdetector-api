@@ -1,0 +1,16 @@
+name: apiverve_gibberishdetector
+description: Gibberish Detector analyzes text using bigram frequency and vowel ratios to identify nonsensical or randomly generated content.
+version: 1.1.14
+homepage: https://apiverve.com/marketplace/gibberishdetector?utm_source=dart&utm_medium=homepage
+repository: https://github.com/apiverve/gibberishdetector-api/tree/main/dart
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  http: ^1.1.0
+  http_parser: ^4.0.0
+
+dev_dependencies:
+  lints: ^3.0.0
+  test: ^1.24.0
