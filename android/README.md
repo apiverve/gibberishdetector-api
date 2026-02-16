@@ -26,7 +26,7 @@ Add the dependency:
 
 ```gradle
 dependencies {
-    implementation 'com.github.apiverve:gibberishdetector-api:1.1.13'
+    implementation 'com.github.apiverve:gibberishdetector-api:1.1.14'
 }
 ```
 
@@ -47,7 +47,7 @@ GibberishDetectorAPIClient client = new GibberishDetectorAPIClient("YOUR_API_KEY
 try {
     // Prepare request parameters
     Map<String, Object> parameters = new HashMap<>();
-    parameters.put("text", "asdfghjkl qwerty");
+    parameters.put("text", "The quick brown fox jumps over the lazy dog");
 
     // Execute the request
     APIResponse response = client.execute(parameters);
