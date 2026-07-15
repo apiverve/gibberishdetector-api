@@ -123,10 +123,12 @@ async function makeRequest() {
   "error": null,
   "data": {
     "isGibberish": false,
-    "score": 0.469,
-    "confidence": 46.93,
+    "score": 0.12,
+    "confidence": 88,
+    "confidenceLevel": "high",
     "text": "The quick brown fox jumps over the lazy dog",
-    "textLength": 43
+    "textLength": 43,
+    "wordCount": 9
   }
 }
 ```
