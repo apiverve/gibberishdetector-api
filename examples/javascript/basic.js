@@ -9,15 +9,22 @@ const API_KEY = process.env.APIVERVE_API_KEY || 'YOUR_API_KEY_HERE';
 const API_URL = 'https://api.apiverve.com/v1/gibberishdetector';
 
 /**
- * Make a GET request to the Gibberish Detector API
+ * Make a POST request to the Gibberish Detector API
  */
 async function callGibberishDetectorAPI() {
   try {
+    // Request body
+    const requestBody &#x3D; {
+    &quot;text&quot;: &quot;The quick brown fox jumps over the lazy dog&quot;
+};
+
     const response = await fetch(API_URL, {
-      method: 'GET',
+      method: 'POST',
       headers: {
-        'x-api-key': API_KEY
-      }
+        'x-api-key': API_KEY,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(requestBody)
     });
 
     // Check if response is successful
