@@ -25,23 +25,44 @@ namespace APIVerve.API.GibberishDetector
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
     {
         [JsonProperty("isGibberish")]
-        public bool IsGibberish { get; set; }
+        public bool? IsGibberish { get; set; }
 
         [JsonProperty("score")]
-        public double Score { get; set; }
+        public double? Score { get; set; }
 
         [JsonProperty("confidence")]
-        public double Confidence { get; set; }
+        public long? Confidence { get; set; }
+
+        [JsonProperty("confidenceLevel")]
+        public string ConfidenceLevel { get; set; }
 
         [JsonProperty("text")]
         public string Text { get; set; }
 
         [JsonProperty("textLength")]
-        public long TextLength { get; set; }
+        public long? TextLength { get; set; }
+
+        [JsonProperty("wordCount")]
+        public long? WordCount { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 }
