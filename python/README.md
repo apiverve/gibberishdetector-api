@@ -3,11 +3,10 @@ Gibberish Detector API
 
 Gibberish Detector analyzes text using bigram frequency and vowel ratios to identify nonsensical or randomly generated content.
 
-![Build Status](https://img.shields.io/badge/build-passing-green)
-![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
-![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 
-This is a Python API Wrapper for the [Gibberish Detector API](https://apiverve.com/marketplace/gibberishdetector?utm_source=pypi&utm_medium=readme)
+[![PyPI version](https://img.shields.io/pypi/v/apiverve-gibberishdetector.svg)](https://pypi.org/project/apiverve-gibberishdetector/)
+
+This is a Python wrapper for the [Gibberish Detector API](https://apiverve.com/marketplace/gibberishdetector?utm_source=pypi&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -29,8 +28,8 @@ pip3 install apiverve-gibberishdetector
 
 ## Configuration
 
-Before using the gibberishdetector API client, you have to setup your account and obtain your API Key.
-You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=pypi&utm_medium=readme)
+Before using the Gibberish Detector API client, you have to setup your account and obtain your API Key.
+You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=pypi&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -60,7 +59,7 @@ except Exception as e:
 
 ## Usage
 
-The Gibberish Detector API documentation is found here: [https://docs.apiverve.com/ref/gibberishdetector](https://docs.apiverve.com/ref/gibberishdetector?utm_source=pypi&utm_medium=readme).
+The Gibberish Detector API documentation is found here: [https://docs.apiverve.com/ref/gibberishdetector](https://docs.apiverve.com/ref/gibberishdetector?utm_source=pypi&utm_medium=referral&utm_content=readme).
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
@@ -103,10 +102,12 @@ print(result)
   "error": null,
   "data": {
     "isGibberish": false,
-    "score": 0.469,
-    "confidence": 46.93,
+    "score": 0.12,
+    "confidence": 88,
+    "confidenceLevel": "high",
     "text": "The quick brown fox jumps over the lazy dog",
-    "textLength": 43
+    "textLength": 43,
+    "wordCount": 9
   }
 }
 ```
@@ -234,7 +235,7 @@ finally:
 
 ## Customer Support
 
-Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=pypi&utm_medium=readme).
+Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=pypi&utm_medium=referral&utm_content=readme).
 
 ---
 
@@ -245,12 +246,12 @@ Stay up to date by following [@apiverveHQ](https://twitter.com/apiverveHQ) on Tw
 
 ## Legal
 
-All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=pypi&utm_medium=readme) and all legal documents and agreements.
+All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=pypi&utm_medium=referral&utm_content=readme) and all legal documents and agreements.
 
 ---
 
 ## License
-Licensed under the The MIT License (MIT)
+Licensed under the MIT License (MIT)
 
 Copyright (&copy;) 2026 APIVerve, and EvlarSoft LLC
 
