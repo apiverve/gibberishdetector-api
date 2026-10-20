@@ -18,7 +18,7 @@ servers:
 paths:
   /v1/gibberishdetector:
     post:
-      summary: Detect Gibberish Text
+      summary: Gibberish Detector
       description: Analyze text to detect gibberish content
       operationId: gibberishdetector
       parameters: []
