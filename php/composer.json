@@ -1,7 +1,7 @@
 {
     "name": "apiverve/gibberishdetector",
     "description": "Gibberish Detector analyzes text using bigram frequency and vowel ratios to identify nonsensical or randomly generated content.",
-    "version": "1.2.2",
+    "version": "1.2.3",
     "type": "library",
     "license": "MIT",
     "authors": [
