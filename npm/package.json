@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/gibberishdetector",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Gibberish Detector analyzes text using bigram frequency and vowel ratios to identify nonsensical or randomly generated content.",
   "main": "index.js",
   "types": "index.d.ts",
