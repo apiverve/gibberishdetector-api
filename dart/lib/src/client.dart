@@ -46,7 +46,7 @@ final _formatPatterns = {
 
 /// Gibberish Detector API client.
 ///
-/// For more information, visit: https://apiverve.com/marketplace/gibberishdetector?utm_source=dart&utm_medium=readme
+/// For more information, visit: https://apiverve.com/marketplace/gibberishdetector?utm_source=dart&utm_medium=referral&utm_content=readme
 ///
 /// Parameters:
 /// * [text] (required) - Text to analyze (max 10,000 characters)

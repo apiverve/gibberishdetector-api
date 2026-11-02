@@ -5,7 +5,7 @@ Gibberish Detector analyzes text using bigram frequency and vowel ratios to iden
 [![pub package](https://img.shields.io/pub/v/apiverve_gibberishdetector.svg)](https://pub.dev/packages/apiverve_gibberishdetector)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-This is the Dart/Flutter client for the [Gibberish Detector API](https://apiverve.com/marketplace/gibberishdetector?utm_source=dart&utm_medium=readme).
+This is the Dart/Flutter client for the [Gibberish Detector API](https://apiverve.com/marketplace/gibberishdetector?utm_source=dart&utm_medium=referral&utm_content=readme).
 
 ## Installation
 
@@ -13,7 +13,7 @@ Add this to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  apiverve_gibberishdetector: ^1.1.14
+  apiverve_gibberishdetector: ^1.2.4
 ```
 
 Then run:
@@ -53,22 +53,24 @@ void main() async {
   "error": null,
   "data": {
     "isGibberish": false,
-    "score": 0.469,
-    "confidence": 46.93,
+    "score": 0.12,
+    "confidence": 88,
+    "confidenceLevel": "high",
     "text": "The quick brown fox jumps over the lazy dog",
-    "textLength": 43
+    "textLength": 43,
+    "wordCount": 9
   }
 }
 ```
 
 ## API Reference
 
-- **API Home:** [Gibberish Detector API](https://apiverve.com/marketplace/gibberishdetector?utm_source=dart&utm_medium=readme)
-- **Documentation:** [docs.apiverve.com/ref/gibberishdetector](https://docs.apiverve.com/ref/gibberishdetector?utm_source=dart&utm_medium=readme)
+- **API Home:** [Gibberish Detector API](https://apiverve.com/marketplace/gibberishdetector?utm_source=dart&utm_medium=referral&utm_content=readme)
+- **Documentation:** [docs.apiverve.com/ref/gibberishdetector](https://docs.apiverve.com/ref/gibberishdetector?utm_source=dart&utm_medium=referral&utm_content=readme)
 
 ## Authentication
 
-All requests require an API key. Get yours at [apiverve.com](https://apiverve.com?utm_source=dart&utm_medium=readme).
+All requests require an API key. Get yours at [apiverve.com](https://apiverve.com?utm_source=dart&utm_medium=referral&utm_content=readme).
 
 ## License
 
@@ -76,4 +78,4 @@ MIT License - see [LICENSE](LICENSE) for details.
 
 ---
 
-Built with Dart for [APIVerve](https://apiverve.com?utm_source=dart&utm_medium=readme)
+Built with Dart for [APIVerve](https://apiverve.com?utm_source=dart&utm_medium=referral&utm_content=readme)
